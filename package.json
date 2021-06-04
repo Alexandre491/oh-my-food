@@ -1,0 +1,25 @@
+{
+  "name": "alexandreraymond_3_30042021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dart-sass": "^1.25.0",
+    "node-sass": "^6.0.0",
+    "sass": "^1.32.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandre491/AlexandreRaymond_3_30042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandre491/AlexandreRaymond_3_30042021/issues"
+  },
+  "homepage": "https://github.com/Alexandre491/AlexandreRaymond_3_30042021#readme"
+}

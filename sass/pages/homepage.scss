@@ -1,0 +1,149 @@
+.localisation{
+    @include flexMid;
+    background-color:rgb(243, 243, 243);
+    font-size: 1.2rem;
+    font: weight 200px;
+    padding: 1rem;
+
+    .icon_localisation{
+
+        margin-right: 1rem;
+        @include icon-size;
+    }
+}
+
+.explorer{
+    text-align: center;
+    padding: 2rem;
+    padding-top: 2rem;
+    background-color: rgb(250,250,250) ;
+    height: 13rem;
+
+    h2{
+        margin: 0;
+    }
+
+    p{
+        margin:1rem 0 0 0;
+        font-size: 1rem;
+        line-height: initial;
+        font-weight:lighter;
+        color: rgb(130, 130, 130);
+        margin-bottom: 3rem;
+    }
+    a{
+        @include bouton;
+        padding: 0.8rem;
+    }
+}
+
+.fonctionnement{
+    padding: 2rem;
+
+    }
+    ol{
+        padding: 0;
+        list-style-type:none;
+        counter-reset:index($list: 1, $value: 1);
+    }
+    ol + li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+    li {
+        padding: 1.5rem;
+        height: 1rem;
+        margin: 1rem 0 1rem 0rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+        display: flex;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: left;
+        background-color: rgb(250,250,250);
+        align-items: center
+    }
+    li img {
+        @include icon-size;
+        margin-left: 0.5rem;
+
+    }
+    .texte{
+        position:absolute;
+        margin-left: 4rem;
+}
+
+.restaurants{
+    padding: 2rem;
+    background-color: rgb(250,250,250);
+
+    .restaurant_titre{
+        margin: 1rem 0 1rem 0;
+    }
+
+    .vignettes{
+        display: block;
+        
+        .vignette{
+            height: 16rem;
+            overflow: hidden;
+            display: block;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 2rem;
+            box-shadow: 0.2rem 0.2rem 0.2rem rgb(0 0 0 / 13%);
+            
+                figure{
+                    border-radius: 30px 0 0;
+                    overflow: hidden;
+                    height: 70%;
+                    width: 20rem;
+                    margin: 0;
+                    
+                    .vignette__img {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+        }
+        .vignette_indication_nouveau{
+            background-color: $vert_menthe;
+            padding: 0.5rem;
+            border-radius: 4px;
+            box-shadow: none;
+            object-fit: cover;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color:darken($vert_menthe, $amount: 50%);
+        }
+        .vignette_div{
+            align-items: center;
+        }
+        .vignette_titre{
+            color: black;
+            margin: 0.5rem 0 0 1rem;
+            font-size: 1.3rem;
+            font-weight: bolder;
+
+            }
+            .vignette_sous_titre{
+                color: black;
+                margin-left: 1rem;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+                font-weight: 100;
+            }
+            .icon_coeur{
+                width: 3rem;
+                margin-left: 21rem;
+            }
+            .menu_bouton{
+                height: 4rem;
+            }
+    }
+}

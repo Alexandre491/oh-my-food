@@ -1,0 +1,10 @@
+@mixin flexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin icon-size{
+    height: 20px;
+}
