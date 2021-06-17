@@ -2,13 +2,20 @@
 /*typo*/
 @import url("https://fonts.googleapis.ccom/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.catégories {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: itemAppear .6s;
+          animation: itemAppear .6s;
+}
+
 body, html {
   margin: 0;
+  width: 100%;
   font-family: 'roboto', 'sans-serif';
 }
 
 .container {
-  max-width: 1280px;
   margin: auto;
 }
 
@@ -44,6 +51,30 @@ a {
   color: white;
 }
 
+.container {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.header_container {
+  height: 100%;
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.image_header {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,13 +87,22 @@ a {
           align-items: center;
   background-color: #f3f3f3;
   font-size: 1.2rem;
-  font: weight 200px;
+  font-weight: 200px;
   padding: 1rem;
 }
 
 .localisation .icon_localisation {
   margin-right: 1rem;
-  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1rem;
 }
 
 .explorer {
@@ -105,8 +145,6 @@ a {
 
 ol {
   padding: 0;
-  list-style-type: none;
-  counter-reset: 1;
 }
 
 ol + li {
@@ -155,25 +193,25 @@ li img {
   margin: 1rem 0 1rem 0;
 }
 
-.restaurants .vignettes {
-  display: block;
-}
-
 .restaurants .vignettes .vignette {
-  height: 14rem;
+  height: 22rem;
   overflow: hidden;
   display: block;
   background-color: white;
   border-radius: 20px;
   position: relative;
   margin-bottom: 2rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+  margin: 0 auto 2rem;
+  width: 70%;
 }
 
 .restaurants .vignettes .vignette figure {
   border-radius: 30px 0 0;
   overflow: hidden;
-  height: 70%;
-  width: 20rem;
+  height: 80%;
+  width: 100%;
   margin: 0;
 }
 
@@ -187,7 +225,7 @@ li img {
 .restaurants .vignettes .vignette_indication_nouveau {
   background-color: #99E2D0;
   padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 4px;
   -webkit-box-shadow: none;
           box-shadow: none;
   -o-object-fit: cover;
@@ -206,7 +244,7 @@ li img {
 
 .restaurants .vignettes .vignette_titre {
   color: black;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 0 0 1rem;
   font-size: 1.3rem;
   font-weight: bolder;
 }
@@ -222,18 +260,166 @@ li img {
 .restaurants .vignettes .icon_coeur {
   width: 3rem;
   margin-left: 21rem;
+  margin-top: 16.8rem;
 }
 
 .restaurants .vignettes .menu_bouton {
   height: 4rem;
 }
 
-.icon_footer {
-  height: 50px;
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+footer .footer_container {
+  padding-top: 2rem;
+  background-color: #131313;
+  width: 100%;
+  height: 10rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer .logo-ohmyfood {
+  width: 7rem;
+  margin-bottom: 2rem;
+}
+
+footer .icon_footer {
+  width: 3rem;
+  margin-left: -0.5rem;
+}
+
+footer .footer_liste_texte_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .icon_footer {
+  height: 20px;
+}
+
+footer a {
+  color: white;
+}
+
+@media (min-width: 380px) and (max-width: 799px) {
+  .image_header {
+    max-height: 32rem;
+  }
+  .menu_contenaire {
+    margin-top: -35%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 0;
+    max-width: none;
+    margin: 0 auto;
+  }
+  header {
+    width: 100%;
+    height: 112px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+  }
+  .header_container {
+    height: 100%;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  main {
+    position: relative;
+    top: 112px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .img_bg {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    margin-top: 3rem;
+  }
+  .menu_contenaire {
+    margin: auto;
+    position: relative;
+    top: 150px;
+  }
+  .image_header {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer {
+    top: 190px;
+    position: inherit;
+    width: 100%;
+    height: auto;
+  }
+  .footer_container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+    background-color: #131313;
+    width: 100%;
+    height: 14rem;
+    padding: 2rem;
+    position: absolute;
+    top: 190px;
+    margin-top: -5rem;
+  }
+  footer .logo-ohmyfood {
+    margin: 0 3rem 2rem 0;
+  }
+  li {
+    margin: 1rem;
+    width: 18rem;
+  }
+  ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .vignettes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+  }
+  .vignette {
+    min-width: 40%;
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+  }
 }
 
 header {
-  width: 96%;
+  width: 100%;
   -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 1rem;
@@ -251,6 +437,9 @@ header img {
 }
 
 body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
   margin: 0;
   font-family: 'roboto', 'sans-serif';
 }
@@ -261,11 +450,6 @@ body {
   font-size: 1rem;
   font-weight: 100;
   line-height: 1.5;
-}
-
-.container {
-  max-width: 1280px;
-  margin: auto;
 }
 
 textarea {
@@ -287,17 +471,27 @@ a {
 
 .image_header {
   max-width: 100%;
-  max-height: 32rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.menu_bouton {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-style: hidden;
+  background: none;
+}
+
 .menu_contenaire {
-  margin-top: -4rem;
-  border-radius: 4rem 4rem 0 0;
+  margin: auto;
+  border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
   position: relative;
+  max-width: 800px;
 }
 
 .menu_contenaire_header {
@@ -305,7 +499,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   font-family: "Shrikhand";
-  padding-left: 3rem;
+  padding-left: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -313,55 +507,197 @@ a {
 }
 
 .menu_contenaire_titre {
-  margin-right: 55%;
+  margin-right: 2rem;
+}
+
+.filet {
+  width: 40px;
+  height: 3px;
+  margin: 5px 0 12px 0;
+  background-color: #99E2D0;
 }
 
 .menu_contenaire_like {
-  height: 50px;
+  height: 20px;
   border: none;
 }
 
 article {
-  margin-left: 3rem;
+  margin-left: 1rem;
+  color: white;
 }
 
 article h3 {
   font-weight: 100;
+  margin: 0;
 }
 
 .catégories {
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem 0 1rem 1rem;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 15px;
   position: relative;
-}
-
-.catégories .menu_item {
+  height: 3rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: apparition ease-out 1.2s;
+          animation: apparition ease-out 1.2s;
+  -webkit-animation: show .5s ease-in-out;
+          animation: show .5s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.catégories .menu_item_icon_ok {
-  opacity: 0;
+.catégories:hover .icon_check {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
-.catégories h4 {
-  font-size: 2.5rem;
-  margin: 0 0 0 0;
+.catégories:hover .menu_item_icon_check {
+  margin: -1rem 0 0 1rem;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
-.catégories p {
-  font-size: 2rem;
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.delay1 {
+  -webkit-animation: apparition ease-out 0.5s;
+          animation: apparition ease-out 0.5s;
+}
+
+.delay2 {
+  -webkit-animation: apparition ease-out 0.8s;
+          animation: apparition ease-out 0.8s;
+}
+
+.delay3 {
+  -webkit-animation: apparition ease-out 1.1s;
+          animation: apparition ease-out 1.1s;
+}
+
+.delay4 {
+  -webkit-animation: apparition ease-out 1.3s;
+          animation: apparition ease-out 1.3s;
+}
+
+.delay5 {
+  -webkit-animation: apparition ease-out 1.5s;
+          animation: apparition ease-out 1.5s;
+}
+
+.delay6 {
+  -webkit-animation: apparition ease-out 1.7s;
+          animation: apparition ease-out 1.7s;
+}
+
+.delay7 {
+  -webkit-animation: apparition ease-out 1.8s;
+          animation: apparition ease-out 1.8s;
+}
+
+.delay8 {
+  -webkit-animation: apparition ease-out 2s;
+          animation: apparition ease-out 2s;
+}
+
+.delay9 {
+  -webkit-animation: apparition ease-out 2s;
+          animation: apparition ease-out 2s;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 100;
   margin: 0 0 1rem 0;
 }
 
-.catégories .menu_item_prix {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
+.menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu_item_header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu_item_prix {
+  margin-top: 0.8rem;
+}
+
+.menu_item_icon_check {
+  background: #99E2D0;
+  width: 4rem;
+  height: 5rem;
+  margin: -1rem -4rem 0 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+  -webkit-transform: translate(-60px) 1s;
+          transform: translate(-60px) 1s;
+}
+
+.icon_check {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .bouton {
@@ -374,42 +710,48 @@ article h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6rem;
+  padding: 2rem 2rem 3rem 2rem;
 }
 
 .bouton a {
-  color: white;
+  color: black;
 }
 
 .commander_bouton {
   border: 0;
-  padding: 1.5rem rem;
   border-radius: 100px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  padding: 1.8rem 4.5rem;
-  font-size: 2.2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
 }
 
 footer {
+  position: absolute;
+  width: 100%;
+}
+
+footer .footer_container {
+  padding-top: 2rem;
   background-color: #131313;
   width: 100%;
-  height: 27rem;
+  height: 10rem;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-footer .container {
-  padding: 3rem;
-}
-
-footer img {
-  width: 14rem;
+footer .logo-ohmyfood {
+  width: 7rem;
   margin-bottom: 2rem;
 }
 
 footer .icon_footer {
   width: 3rem;
-  margin-right: 2rem;
+  margin-left: -0.5rem;
 }
 
 footer .footer_liste_texte_logo {
@@ -419,15 +761,532 @@ footer .footer_liste_texte_logo {
 }
 
 footer .icon_footer {
-  height: 50px;
+  height: 20px;
 }
 
 footer a {
   color: white;
 }
 
+main {
+  position: relative;
+}
+
+@media (min-width: 380px) and (max-width: 799px) {
+  .image_header {
+    max-height: 32rem;
+  }
+  .menu_contenaire {
+    margin-top: -35%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 0;
+    max-width: none;
+    margin: 0 auto;
+  }
+  header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+  }
+  .header_container {
+    height: 100%;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  main {
+    position: relative;
+    top: 112px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .img_bg {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    margin-top: 3rem;
+  }
+  .menu_contenaire {
+    margin: auto;
+    position: relative;
+    top: 150px;
+  }
+  .image_header {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer {
+    top: 190px;
+    position: inherit;
+    width: 100%;
+  }
+  .footer_container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+    background-color: #131313;
+    width: 100%;
+    height: 14rem;
+    padding: 2rem;
+    position: absolute;
+    top: 190px;
+  }
+  footer .logo-ohmyfood {
+    margin: 0 3rem 2rem 0;
+  }
+}
+
 header {
-  width: 96%;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+header img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  width: 40%;
+  max-width: 25%;
+  min-width: 300px;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'roboto', 'sans-serif';
+}
+
+body {
+  font-family: 'roboto', 'sans-serif';
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+textarea {
+  font-family: 'roboto', 'sans-serif';
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: initial;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.image_header {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu_bouton {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-style: hidden;
+  background: none;
+}
+
+.menu_contenaire {
+  margin: auto;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+  max-width: 800px;
+}
+
+.menu_contenaire_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand";
+  padding-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.menu_contenaire_titre {
+  margin-right: 2rem;
+}
+
+.filet {
+  width: 40px;
+  height: 3px;
+  margin: 5px 0 12px 0;
+  background-color: #99E2D0;
+}
+
+.menu_contenaire_like {
+  height: 20px;
+  border: none;
+}
+
+article {
+  margin-left: 1rem;
+  color: white;
+}
+
+article h3 {
+  font-weight: 100;
+  margin: 0;
+}
+
+.catégories {
+  padding: 1rem 0 1rem 1rem;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: apparition ease-out 1.2s;
+          animation: apparition ease-out 1.2s;
+  -webkit-animation: show .5s ease-in-out;
+          animation: show .5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.catégories:hover .icon_check {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+.catégories:hover .menu_item_icon_check {
+  margin: -1rem 0 0 1rem;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.delay1 {
+  -webkit-animation: apparition ease-out 0.5s;
+          animation: apparition ease-out 0.5s;
+}
+
+.delay2 {
+  -webkit-animation: apparition ease-out 0.8s;
+          animation: apparition ease-out 0.8s;
+}
+
+.delay3 {
+  -webkit-animation: apparition ease-out 1.1s;
+          animation: apparition ease-out 1.1s;
+}
+
+.delay4 {
+  -webkit-animation: apparition ease-out 1.3s;
+          animation: apparition ease-out 1.3s;
+}
+
+.delay5 {
+  -webkit-animation: apparition ease-out 1.5s;
+          animation: apparition ease-out 1.5s;
+}
+
+.delay6 {
+  -webkit-animation: apparition ease-out 1.7s;
+          animation: apparition ease-out 1.7s;
+}
+
+.delay7 {
+  -webkit-animation: apparition ease-out 1.8s;
+          animation: apparition ease-out 1.8s;
+}
+
+.delay8 {
+  -webkit-animation: apparition ease-out 2s;
+          animation: apparition ease-out 2s;
+}
+
+.delay9 {
+  -webkit-animation: apparition ease-out 2s;
+          animation: apparition ease-out 2s;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0 0 1rem 0;
+}
+
+.menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu_item_header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu_item_prix {
+  margin-top: 0.8rem;
+}
+
+.menu_item_icon_check {
+  background: #99E2D0;
+  width: 4rem;
+  height: 5rem;
+  margin: -1rem -4rem 0 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+  -webkit-transform: translate(-60px) 1s;
+          transform: translate(-60px) 1s;
+}
+
+.icon_check {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bouton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 2rem 3rem 2rem;
+}
+
+.bouton a {
+  color: black;
+}
+
+.commander_bouton {
+  border: 0;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+footer .footer_container {
+  padding-top: 2rem;
+  background-color: #131313;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer .logo-ohmyfood {
+  width: 7rem;
+  margin-bottom: 2rem;
+}
+
+footer .icon_footer {
+  width: 3rem;
+  margin-left: -0.5rem;
+}
+
+footer .footer_liste_texte_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .icon_footer {
+  height: 20px;
+}
+
+footer a {
+  color: white;
+}
+
+main {
+  position: relative;
+}
+
+@media (min-width: 380px) and (max-width: 799px) {
+  .image_header {
+    max-height: 32rem;
+  }
+  .menu_contenaire {
+    margin-top: -35%;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 0;
+    max-width: none;
+    margin: 0 auto;
+  }
+  header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+  }
+  .header_container {
+    height: 100%;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  main {
+    position: relative;
+    top: 112px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .img_bg {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    margin-top: 3rem;
+  }
+  .menu_contenaire {
+    margin: auto;
+    position: relative;
+    top: 150px;
+  }
+  .image_header {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer {
+    top: 190px;
+    position: inherit;
+    width: 100%;
+  }
+  .footer_container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+    background-color: #131313;
+    width: 100%;
+    height: 14rem;
+    padding: 2rem;
+    position: absolute;
+    top: 190px;
+  }
+  footer .logo-ohmyfood {
+    margin: 0 3rem 2rem 0;
+  }
+}
+
+header {
+  width: 100%;
   -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 1rem;
@@ -441,32 +1300,33 @@ header img {
   margin-top: 1rem;
   width: 40%;
   max-width: 25%;
-  min-width: 50%;
+  min-width: 300px;
 }
 
-footer {
-  background-color: #131313;
-  width: 100%;
-  height: 27rem;
-}
-
-footer .container {
-  padding: 3rem;
-}
-
-footer img {
-  width: 14rem;
-  margin-bottom: 2rem;
-}
-
-footer .icon_footer {
-  width: 3rem;
-  margin-right: 2rem;
-}
-
-footer .footer_liste_texte_logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 800px) {
+  footer {
+    background-color: #131313;
+    width: 100%;
+    height: 14rem;
+  }
+  footer .logo-ohmyfood {
+    width: 7rem;
+    margin-bottom: 2rem;
+  }
+  footer .icon_footer {
+    width: 3rem;
+    margin-left: -0.5rem;
+  }
+  footer .footer_liste_texte_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .icon_footer {
+    height: 20px;
+  }
+  footer a {
+    color: white;
+  }
 }
 /*# sourceMappingURL=main.css.map */

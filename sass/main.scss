@@ -2,18 +2,21 @@
 @import url('https://fonts.googleapis.ccom/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+@import "./utils/mixins";
 @import "./utils/variables";
 @import "./utils/animations";
-@import "./utils/mixins";
+
 
 @import "./base/base";
 @import "./base/_typography";
 
 @import "./components/buttons";
 
+@import "./layout/header";
+@import "./layout/footer";
 
 @import "./pages/homepage";
 @import "./pages/menupage";
-
-@import "./layout/header";
-@import "./layout/footer"
+@import "./La\ \ note\ enchantée.html";
+@import "./La\ palette\ du\ goût.html";
+@import "./Le\ délice\ des\ sens.html";

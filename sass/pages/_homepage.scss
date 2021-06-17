@@ -1,0 +1,309 @@
+
+.container{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.header_container{
+    height: 100%;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.image_header{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.localisation{
+    @include flexMid;
+    background-color:rgb(243, 243, 243);
+    font-size: 1.2rem;
+    font-weight: 200px;
+    padding: 1rem;
+
+    .icon_localisation{
+
+        margin-right: 1rem;
+        @include flexMid;
+        height: 1rem;
+    }
+}
+
+.explorer{
+    text-align: center;
+    padding: 2rem;
+    padding-top: 2rem;
+    background-color: rgb(250,250,250) ;
+    height: 13rem;
+
+    h2{
+        margin: 0;
+    }
+
+    p{
+        margin:1rem 0 0 0;
+        font-size: 1rem;
+        line-height: initial;
+        font-weight:lighter;
+        color: rgb(130, 130, 130);
+        margin-bottom: 3rem;
+    }
+    a{
+        @include bouton;
+        padding: 0.8rem;
+    }
+}
+
+.fonctionnement{
+    padding: 2rem;
+
+    }
+    ol{
+        padding: 0;
+    }
+    ol + li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+    li {
+        padding: 1.5rem;
+        height: 1rem;
+        margin: 1rem 0 1rem 0rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+        display: flex;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: left;
+        background-color: rgb(250,250,250);
+        align-items: center
+    }
+    li img {
+        @include icon-size;
+        margin-left: 0.5rem;
+
+    }
+    .texte{
+        position:absolute;
+        margin-left: 4rem;
+}
+
+.restaurants{
+    padding: 2rem;
+    background-color: rgb(250,250,250);
+
+    .restaurant_titre{
+        margin: 1rem 0 1rem 0;
+    }
+
+    .vignettes{
+        
+        .vignette{
+            height: 22rem;
+            overflow: hidden;
+            display: block;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            position: relative;
+            margin-bottom: 2rem;    
+            box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
+            margin: 0 auto 2rem;  
+            width: 70%;
+            
+                figure{
+                    border-radius: 30px 0 0;
+                    overflow: hidden;
+                    height: 80%;
+                    width: 100%;
+                    margin: 0;
+                    
+                    .vignette__img {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+        }
+        .vignette_indication_nouveau{
+            background-color: $vert_menthe;
+            padding: 0.5rem;
+            border-radius: 4px;
+            box-shadow: none;
+            object-fit: cover;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color:darken($vert_menthe, $amount: 50%);
+        }
+        .vignette_div{
+            align-items: center;
+        }
+        .vignette_titre{
+            color: black;
+            margin: 0.5rem 0 0 1rem;
+            font-size: 1.3rem;
+            font-weight: bolder;
+
+            }
+            .vignette_sous_titre{
+                color: black;
+                margin-left: 1rem;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+                font-weight: 100;
+            }
+            .icon_coeur{
+                width: 3rem;
+                margin-left: 21rem;
+                margin-top: 16.8rem;
+            }
+            .menu_bouton{
+                height: 4rem;
+            }
+    }
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+        .footer_container{
+            padding-top: 2rem;
+            background-color: rgb(19, 19, 19);
+            width: 100%;
+            height: 10rem; 
+            box-sizing:border-box;
+        }
+        .logo-ohmyfood{
+            width: 7rem;
+            margin-bottom: 2rem;
+        }
+        .icon_footer{
+            width: 3rem;
+            margin-left: -0.5rem;
+        }
+        .footer_liste_texte_logo{
+            display: flex;
+        }
+        .icon_footer{
+            height: 20px;
+        }
+        a{
+            color: white;
+        }
+}
+
+@media (min-width: 380px) and (max-width: 799px){
+    .image_header{
+        max-height: 32rem;
+    }
+    .menu_contenaire{
+        margin-top: -35%;
+    }
+}
+
+@media (min-width: 800px){
+
+    body{
+        margin: 0; 
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    header{
+        width: 100%;
+        height: 112px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        z-index: 3;
+    }
+
+    .header_container{
+        height: 100%;
+        width: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+    }
+
+    main {
+        position: relative;
+        top: 112px;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .img_bg {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        margin-top: 3rem;
+    }
+
+    .menu_contenaire{
+        margin: auto;
+        position: relative;
+        top: 150px;
+    }
+
+    .image_header{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .footer{
+        top: 190px;
+        position: inherit;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer_container{
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        margin-top: 2rem;
+        background-color: #131313;
+        width: 100%;
+        height: 14rem;
+        padding: 2rem;
+        position: absolute;
+        top: 190px;
+        margin-top: -5rem;
+    }
+
+    footer .logo-ohmyfood{
+        margin: 0 3rem 2rem 0;
+    }
+
+    li{
+        margin: 1rem;
+        width: 18rem;
+    }
+    ol{
+        display: flex;
+        justify-content: center;
+    }
+
+    .vignettes{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;   
+    }
+
+    .vignette{
+        min-width: 40%;
+        max-width: 30rem;
+        margin: 0 auto 2rem;
+    }
+}       

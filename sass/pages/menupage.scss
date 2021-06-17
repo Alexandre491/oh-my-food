@@ -117,6 +117,7 @@ a{
 
 article{
     margin-left: 1rem;
+    color: white;
 
     h3 {
         font-weight: 100;
@@ -137,6 +138,18 @@ article{
     cursor: pointer;
     animation: apparition ease-out 1.2s;
     display: flex;
+
+        &:hover .icon_check{
+            transform: rotate(-360deg);
+            transition-duration: 400ms;
+            animation-timing-function: ease-in-out;
+            
+        }
+        &:hover .menu_item_icon_check{
+            margin: -1rem 0 0 1rem;
+            transition-duration: 300ms;
+        }
+    
     }
     @keyframes apparition {
        from{
@@ -212,37 +225,30 @@ article{
     align-items: center;
     justify-content: center;
     transition: 5s;
-    &:hover {
-        margin:-1rem 0 0 1rem;
-    }
+    transform: translate(-60px) 1s;
 }
-
 
 .icon_check{
     height: 30px;
     display: flex;
-    transform: rotate(360deg);
-    transition-duration: 0.4s;
 }
-
 
 .bouton{
     @include flexMid;
     padding:2rem 2rem 3rem 2rem;
 
     a{
-        color: white;
+        color: black;
     }
 }
 .commander_bouton {
 
         border: 0;
-        padding: 1.5rem rem ;
         border-radius: 100px;
         background: linear-gradient($rose, $violet);
         color: white;
         padding: 0.5rem 2rem;
-        font-size: 1rem;    
+        font-size: 1rem;
         box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);    
 
 }
@@ -257,6 +263,7 @@ footer{
             width: 100%;
             height: 10rem;
             padding: 2rem;
+            box-sizing:border-box;
         }
         .logo-ohmyfood{
             width: 7rem;
@@ -313,11 +320,12 @@ main{
         margin: 0 auto;
         display: flex;
         position: relative;
+        justify-content: center;
     }
 
     main {
         position: relative;
-        top: 80px;
+        top: 112px;
         height: fit-content;
         width: 100%;
     }
