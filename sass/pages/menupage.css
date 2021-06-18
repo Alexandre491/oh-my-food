@@ -147,6 +147,12 @@ article h3 {
           transition-duration: 300ms;
 }
 
+.catégories .out {
+  margin: -1rem -4rem 0 1rem;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
 @-webkit-keyframes apparition {
   from {
     opacity: 0;
@@ -384,6 +390,7 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    display: flex;
   }
   main {
     position: relative;

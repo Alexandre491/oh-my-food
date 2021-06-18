@@ -149,7 +149,10 @@ article{
             margin: -1rem 0 0 1rem;
             transition-duration: 300ms;
         }
-    
+.out{
+    margin: -1rem -4rem 0 1rem;
+    transition-duration: 500ms   ;
+}
     }
     @keyframes apparition {
        from{
@@ -321,6 +324,7 @@ main{
         display: flex;
         position: relative;
         justify-content: center;
+        display: flex;
     }
 
     main {
