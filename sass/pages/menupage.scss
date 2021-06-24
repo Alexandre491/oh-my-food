@@ -22,9 +22,12 @@ $vert_menthe: #99E2D0;
 @mixin icon-size{
     height: 40px;
 }
+footer+div{
+    opacity: 0s;
+}
 
 header {
-    width:100%;
+    width:96%;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
     padding: 1rem;
         img {
@@ -36,7 +39,31 @@ header {
         min-width: 300px;
 }
 }
+    body{
+        margin: 0; 
+        max-width: none;
+        margin: 0 auto;
+    }
 
+    header{
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        z-index: 3;
+    }
+
+    .header_container{
+        height: 100%;
+        width: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        display: flex;
+    }
 body, html {
 
     height: 100%;
@@ -228,7 +255,7 @@ article{
     align-items: center;
     justify-content: center;
     transition: 5s;
-    transform: translate(-60px) 1s;
+    transform: translate(-60px);
 }
 
 .icon_check{

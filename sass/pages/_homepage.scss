@@ -5,6 +5,10 @@
     height: 100%;
 }
 
+footer+div{
+    opacity: 0s;
+}
+
 .header_container{
     height: 100%;
     width: 100%;
@@ -24,7 +28,7 @@
     @include flexMid;
     background-color:rgb(243, 243, 243);
     font-size: 1.2rem;
-    font-weight: 200px;
+    font-weight: 200;
     padding: 1rem;
 
     .icon_localisation{
@@ -86,6 +90,10 @@
         background-color: rgb(250,250,250);
         align-items: center
     }
+    .violet{
+        background-color: #e5cffd;
+    }
+
     li img {
         @include icon-size;
         margin-left: 0.5rem;
