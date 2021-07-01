@@ -1,3 +1,93 @@
+/*Loader*/
+
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: absolute;
+    animation: findout 1.5s;
+    opacity: 0;
+}
+@keyframes findout{
+    0%{
+        opacity: 100%;
+    }
+    99%{
+        opacity:100%;
+    }
+    100%{
+        opacity:0%
+    }
+}
+
+.lettre{
+    color: blueviolet;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: fash 0.9s linear;
+    animation-name: flash;
+}
+@keyframes flash {
+    0%{
+        color: mediumorchid;
+    }
+    90%{
+        color: tomato;
+    }
+    100%{
+        color: coral;
+    }
+} 
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+
+.lettre.lettre:nth-child(10){
+    animation-delay: 1s;
+}
+
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+
+}
 
 .container{
     margin: auto;
@@ -11,7 +101,7 @@ footer+div{
 
 .header_container{
     height: 100%;
-    width: 100%;
+    width: auto;
     max-width: 840px;
     margin: 0 auto;
     display: flex;
@@ -226,7 +316,7 @@ footer{
     }
 
     header{
-        width: 100%;
+        width: auto;
         height: 112px;
         position: fixed;
         top: 0;
@@ -241,6 +331,7 @@ footer{
         margin: 0 auto;
         display: flex;
         position: relative;
+        justify-content: center;
     }
 
     main {
