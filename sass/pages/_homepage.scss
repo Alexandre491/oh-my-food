@@ -104,10 +104,6 @@
     height: 100%;
 }
 
-footer+div{
-    opacity: 0s;
-}
-
 .header_container{
     height: 100%;
     width: auto;
@@ -291,9 +287,6 @@ ol{
     position: absolute;
     bottom: -1.2rem;
     right: -2rem;
-        &:hover{
-            transform: opacity 1.0;
-        }
 }
 
 .icon_coeur{
