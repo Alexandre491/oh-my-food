@@ -7,40 +7,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 0;
     position: absolute;
     animation: findout 1.5s;
     opacity: 0;
+    position: fixed;
+    scroll-behavior: unset;
+    
 }
 @keyframes findout{
     0%{
         opacity: 100%;
+        z-index: 3;
     }
     99%{
         opacity:100%;
+        z-index: 3;
     }
     100%{
-        opacity:0%
+        opacity:0%;
+        z-index: 3;
     }
 }
 
 .lettre{
     color: blueviolet;
-    font-size: 80px;
+    font-size: 20px;
     letter-spacing: 15px;
-    margin-bottom: 150px;
     animation: fash 0.9s linear;
     animation-name: flash;
+    z-index: 3;
 }
 @keyframes flash {
     0%{
         color: mediumorchid;
+        z-index: 3;
     }
     90%{
         color: tomato;
+        z-index: 3;
     }
     100%{
         color: coral;
+        z-index: 3;
     }
 } 
 .lettre:nth-child(1){
@@ -158,15 +167,18 @@ footer+div{
     padding: 2rem;
 
     }
-    ol{
+    ul{
         padding: 0;
+        justify-content: center;
     }
-    ol + li{
+    ul + li{
         margin: 0;
         padding: 0;
         list-style: none;
 }
-
+ol{
+    padding: 0;
+}
     li {
         padding: 1.5rem;
         height: 1rem;
@@ -179,6 +191,20 @@ footer+div{
         justify-content: left;
         background-color: rgb(250,250,250);
         align-items: center
+    }
+
+    .number{
+        background-color:$violet;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        color: white;
+        position: absolute;
+        left: -0.90rem;
     }
     .violet{
         background-color: #e5cffd;
@@ -215,6 +241,7 @@ footer+div{
             box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.125);
             margin: 0 auto 2rem;  
             width: 70%;
+            }
             
                 figure{
                     border-radius: 30px 0 0;
@@ -258,15 +285,30 @@ footer+div{
                 font-size: 1rem;
                 font-weight: 100;
             }
-            .icon_coeur{
-                width: 3rem;
-                margin-left: 21rem;
-                margin-top: 16.8rem;
-            }
-            .menu_bouton{
-                height: 4rem;
-            }
     }
+
+.menu_bouton{
+    position: absolute;
+    bottom: -1.2rem;
+    right: -2rem;
+        &:hover{
+            transform: opacity 1.0;
+        }
+}
+
+
+.icon_coeur, .icon_coeur_gradient {
+    position: absolute;
+    bottom: 1rem;
+    right: -1rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.icon_coeur_gradient{
+    height: 2.7rem;
+    bottom: 1.1rem;
+    opacity: 0;
 }
 
 footer{
@@ -298,13 +340,34 @@ footer{
         }
 }
 
-@media (min-width: 380px) and (max-width: 799px){
+@media (min-width: 375px) and (max-width: 799px){
     .image_header{
         max-height: 32rem;
     }
     .menu_contenaire{
         margin-top: -35%;
     }
+    .localisation{
+        margin-top: 7rem;
+    }
+    .explorer{
+        padding-top: 2rem;
+    }
+    .restaurants .vignette_titre{
+        font-size: 1rem;
+    }
+    .restaurants .vignette_sous_titre{
+        font-size: 0.8rem;
+        margin-top: -1rem;
+    }
+    .icon_coeur, .icon_coeur_gradient {
+        height: 2rem;
+    }
+    .restaurants .vignettes .vignette{
+        height: 18rem;
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 800px){
@@ -405,4 +468,4 @@ footer{
         max-width: 30rem;
         margin: 0 auto 2rem;
     }
-}       
+}

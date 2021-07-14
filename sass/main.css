@@ -2,6 +2,11 @@
 /*typo*/
 @import url("https://fonts.googleapis.ccom/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url(./_Alafrançaise.html);
+@import url(./_lanoteenchantee.html);
+@import url(./_lapalettedugout.html);
+@import url(./_ledelicedessens.html);
+@import url(./index.html);
 .catégories {
   overflow: hidden;
   cursor: pointer;
@@ -113,69 +118,83 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 3;
+  z-index: 0;
   position: absolute;
   -webkit-animation: findout 1.5s;
           animation: findout 1.5s;
   opacity: 0;
+  position: fixed;
+  scroll-behavior: unset;
 }
 
 @-webkit-keyframes findout {
   0% {
     opacity: 100%;
+    z-index: 3;
   }
   99% {
     opacity: 100%;
+    z-index: 3;
   }
   100% {
     opacity: 0%;
+    z-index: 3;
   }
 }
 
 @keyframes findout {
   0% {
     opacity: 100%;
+    z-index: 3;
   }
   99% {
     opacity: 100%;
+    z-index: 3;
   }
   100% {
     opacity: 0%;
+    z-index: 3;
   }
 }
 
 .lettre {
   color: blueviolet;
-  font-size: 80px;
+  font-size: 20px;
   letter-spacing: 15px;
-  margin-bottom: 150px;
   -webkit-animation: fash 0.9s linear;
           animation: fash 0.9s linear;
   -webkit-animation-name: flash;
           animation-name: flash;
+  z-index: 3;
 }
 
 @-webkit-keyframes flash {
   0% {
     color: mediumorchid;
+    z-index: 3;
   }
   90% {
     color: tomato;
+    z-index: 3;
   }
   100% {
     color: coral;
+    z-index: 3;
   }
 }
 
 @keyframes flash {
   0% {
     color: mediumorchid;
+    z-index: 3;
   }
   90% {
     color: tomato;
+    z-index: 3;
   }
   100% {
     color: coral;
+    z-index: 3;
   }
 }
 
@@ -334,14 +353,21 @@ footer + div {
   padding: 2rem;
 }
 
-ol {
+ul {
   padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-ol + li {
+ul + li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+ol {
+  padding: 0;
 }
 
 li {
@@ -363,6 +389,26 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.number {
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  position: absolute;
+  left: -0.90rem;
 }
 
 .violet {
@@ -402,7 +448,7 @@ li img {
   width: 70%;
 }
 
-.restaurants .vignettes .vignette figure {
+.restaurants .vignettes figure {
   border-radius: 30px 0 0;
   overflow: hidden;
   height: 80%;
@@ -410,14 +456,14 @@ li img {
   margin: 0;
 }
 
-.restaurants .vignettes .vignette figure .vignette__img {
+.restaurants .vignettes figure .vignette__img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
 }
 
-.restaurants .vignettes .vignette_indication_nouveau {
+.restaurants .vignette_indication_nouveau {
   background-color: #99E2D0;
   padding: 0.5rem;
   border-radius: 4px;
@@ -431,20 +477,20 @@ li img {
   color: #1b6150;
 }
 
-.restaurants .vignettes .vignette_div {
+.restaurants .vignette_div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.restaurants .vignettes .vignette_titre {
+.restaurants .vignette_titre {
   color: black;
   margin: 0.5rem 0 0 1rem;
   font-size: 1.3rem;
   font-weight: bolder;
 }
 
-.restaurants .vignettes .vignette_sous_titre {
+.restaurants .vignette_sous_titre {
   color: black;
   margin-left: 1rem;
   margin-bottom: 2rem;
@@ -452,14 +498,29 @@ li img {
   font-weight: 100;
 }
 
-.restaurants .vignettes .icon_coeur {
-  width: 3rem;
-  margin-left: 21rem;
-  margin-top: 16.8rem;
+.menu_bouton {
+  position: absolute;
+  bottom: -1.2rem;
+  right: -2rem;
 }
 
-.restaurants .vignettes .menu_bouton {
-  height: 4rem;
+.menu_bouton:hover {
+  -webkit-transform: opacity 1.0;
+          transform: opacity 1.0;
+}
+
+.icon_coeur, .icon_coeur_gradient {
+  position: absolute;
+  bottom: 1rem;
+  right: -1rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.icon_coeur_gradient {
+  height: 2.7rem;
+  bottom: 1.1rem;
+  opacity: 0;
 }
 
 footer {
@@ -500,12 +561,32 @@ footer a {
   color: white;
 }
 
-@media (min-width: 380px) and (max-width: 799px) {
+@media (min-width: 375px) and (max-width: 799px) {
   .image_header {
     max-height: 32rem;
   }
   .menu_contenaire {
     margin-top: -35%;
+  }
+  .localisation {
+    margin-top: 7rem;
+  }
+  .explorer {
+    padding-top: 2rem;
+  }
+  .restaurants .vignette_titre {
+    font-size: 1rem;
+  }
+  .restaurants .vignette_sous_titre {
+    font-size: 0.8rem;
+    margin-top: -1rem;
+  }
+  .icon_coeur, .icon_coeur_gradient {
+    height: 2rem;
+  }
+  .restaurants .vignettes .vignette {
+    height: 18rem;
+    width: 100%;
   }
 }
 
