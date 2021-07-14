@@ -296,19 +296,24 @@ ol{
         }
 }
 
-
-.icon_coeur, .icon_coeur_gradient {
+.icon_coeur{
+    z-index: 2;
     position: absolute;
     bottom: 1rem;
     right: -1rem;
-    height: 3rem;
-    cursor: pointer;
+    height: 2rem;
 }
 
-.icon_coeur_gradient{
-    height: 2.7rem;
-    bottom: 1.1rem;
+.icon_coeur_gradient {
+    position: absolute;
+    bottom: 1rem;
+    right: -0.9rem;
+    height: 0.1rem;
+    cursor: pointer;
+    height: 1.6rem;
+    bottom: 1.2rem;
     opacity: 0;
+    z-index: 1;
 }
 
 footer{
@@ -318,7 +323,7 @@ footer{
             padding-top: 2rem;
             background-color: rgb(19, 19, 19);
             width: 100%;
-            height: 10rem; 
+            height: 14rem; 
             box-sizing:border-box;
         }
         .logo-ohmyfood{
@@ -359,9 +364,6 @@ footer{
     .restaurants .vignette_sous_titre{
         font-size: 0.8rem;
         margin-top: -1rem;
-    }
-    .icon_coeur, .icon_coeur_gradient {
-        height: 2rem;
     }
     .restaurants .vignettes .vignette{
         height: 18rem;
