@@ -13,10 +13,6 @@ $vert_menthe: #99E2D0;
     padding: 1.5rem 2rem ;
     border-radius: 100px;
     background: linear-gradient($rose, $violet);
-
-    a{
-        color: white;
-    }
 }
 
 @mixin icon-size{
@@ -34,6 +30,7 @@ header {
         width: 40%;
         max-width: 25%;
         min-width: 300px;
+        margin-top: 0;
 }
 }
 
@@ -228,7 +225,16 @@ article{
     align-items: center;
     justify-content: center;
     transition: 5s;
-    transform: translate(-60px);
+    transform: translate(-60px)1s;
+}
+.lien_retour{
+    display: flex;
+    align-items: center ;
+}
+.retour{
+    height: 2rem;
+    position: absolute;
+    left: -7rem;
 }
 
 .icon_check{
@@ -239,11 +245,8 @@ article{
 .bouton{
     @include flexMid;
     padding:2rem 2rem 3rem 2rem;
-
-    a{
-        color: black;
-    }
 }
+    
 .commander_bouton {
 
         border: 0;
@@ -325,6 +328,7 @@ main{
         position: relative;
         justify-content: center;
         display: flex;
+        align-items: center;
     }
 
     main {

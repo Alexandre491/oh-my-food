@@ -97,7 +97,9 @@
     transition: opacity 0.4s ease-out;
 
 }
-
+.blanc{
+    color: white;
+}
 .container{
     margin: auto;
     width: 100%;
@@ -267,6 +269,7 @@ ol{
         .vignette_div{
             align-items: center;
         }
+
         .vignette_titre{
             color: black;
             margin: 0.5rem 0 0 1rem;

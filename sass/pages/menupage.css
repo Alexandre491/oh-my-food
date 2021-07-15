@@ -15,6 +15,7 @@ header img {
   width: 40%;
   max-width: 25%;
   min-width: 300px;
+  margin-top: 0;
 }
 
 body, html {
@@ -276,6 +277,21 @@ p {
           transform: translate(-60px) 1s;
 }
 
+.lien_retour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.retour {
+  height: 2rem;
+  position: absolute;
+  left: -7rem;
+}
+
 .icon_check {
   height: 30px;
   display: -webkit-box;
@@ -294,10 +310,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem 2rem 3rem 2rem;
-}
-
-.bouton a {
-  color: black;
 }
 
 .commander_bouton {
@@ -391,6 +403,9 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main {
     position: relative;
