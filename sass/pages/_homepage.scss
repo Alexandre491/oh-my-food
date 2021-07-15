@@ -161,6 +161,39 @@
     }
 }
 
+/* TAILLE DES COEURS */
+
+.img_icon_coeur{
+    height: 2rem;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 0;
+}
+
+.img_icon_coeur_gradient{
+    height: 1.8rem;
+    position: absolute;
+    bottom: 1.25rem;
+    right: 0;
+}
+
+/* ANIMATION SURVOL COEUR */
+
+.icon_coeur{
+    opacity: 1;
+}
+.icon_coeur:hover{
+    opacity: 0;
+}
+
+.img_icon_coeur_gradient{
+    opacity: 0;
+}
+.img_icon_coeur_gradient:hover{
+    opacity: 1;
+}
+
+
 .fonctionnement{
     padding: 2rem;
 
@@ -290,26 +323,6 @@ ol{
     position: absolute;
     bottom: -1.2rem;
     right: -2rem;
-}
-
-.icon_coeur{
-    z-index: 2;
-    position: absolute;
-    bottom: 1rem;
-    right: -1rem;
-    height: 2rem;
-}
-
-.icon_coeur_gradient {
-    position: absolute;
-    bottom: 1rem;
-    right: -0.9rem;
-    height: 0.1rem;
-    cursor: pointer;
-    height: 1.6rem;
-    bottom: 1.2rem;
-    opacity: 0;
-    z-index: 1;
 }
 
 footer{
