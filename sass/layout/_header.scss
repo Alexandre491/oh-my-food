@@ -1,14 +1,22 @@
 header {
-    width:auto;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-    padding: 1rem;
-    justify-content: center;
-        img {
-        display: flex;
-        margin: auto;
-        margin-top: 1rem;
-        width: 40%;
-        max-width: 25%;
-        min-width: 300px;
-}
+	width: auto;
+	box-shadow: 0
+		0
+		0.5rem
+		rgba(
+			0,
+			0,
+			0,
+			0.25
+		);
+	padding: 1rem;
+	justify-content: center;
+	img {
+		display: flex;
+		margin: auto;
+		margin-top: 1rem;
+		width: 40%;
+		max-width: 25%;
+		min-width: 300px;
+	}
 }

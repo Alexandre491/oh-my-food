@@ -1,24 +1,28 @@
 @media (max-width: 800px) {
-    footer{
-        background-color: rgb(19, 19, 19);
-        width: 96%;
-        height: 14rem;
-            .logo-ohmyfood{
-                width: 7rem;
-                margin-bottom: 2rem;
-            }
-            .icon_footer{
-                width: 3rem;
-                margin-left: -0.5rem;
-            }
-            .footer_liste_texte_logo{
-                display: flex;
-            }
-            .icon_footer{
-                height: 20px;
-            }
-            a{
-                color: white;
-            }
-    }
+	footer {
+		background-color: rgb(
+			19,
+			19,
+			19
+		);
+		width: 96%;
+		height: 14rem;
+		.logo-ohmyfood {
+			width: 7rem;
+			margin-bottom: 2rem;
+		}
+		.icon_footer {
+			width: 3rem;
+			margin-left: -0.5rem;
+		}
+		.footer_liste_texte_logo {
+			display: flex;
+		}
+		.icon_footer {
+			height: 20px;
+		}
+		a {
+			color: white;
+		}
+	}
 }

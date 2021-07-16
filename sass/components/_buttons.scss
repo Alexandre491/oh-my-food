@@ -1,11 +1,14 @@
 @mixin bouton {
-    border: 0;
-    padding: 1.5rem 2rem ;
-    border-radius: 100px;
-    background: linear-gradient($rose, $violet);
+	border: 0;
+	padding: 1.5rem
+		2rem;
+	border-radius: 100px;
+	background: linear-gradient(
+		$rose,
+		$violet
+	);
 
-    a{
-        color: white;
-    }
-
+	a {
+		color: white;
+	}
 }
