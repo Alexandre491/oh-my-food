@@ -2,6 +2,18 @@ $violet: #9356dc;
 $rose: #ff79da;
 $vert_menthe: #99e2d0;
 
+.explorer
+	a {
+	box-shadow: 0.2rem
+		0.2rem
+		0.2rem
+		rgba(
+			0,
+			0,
+			0,
+			0.125
+		);
+}
 @mixin flexMid {
 	display: flex;
 	justify-content: center;
@@ -24,7 +36,7 @@ $vert_menthe: #99e2d0;
 }
 
 header {
-	width: 100%;
+	max-width: 100%;
 	box-shadow: 0
 		0
 		0.5rem
@@ -40,8 +52,6 @@ header {
 		margin: auto;
 		margin-top: 2rem;
 		width: 40%;
-		max-width: 25%;
-		min-width: 300px;
 		margin-top: 0;
 	}
 }
@@ -88,14 +98,16 @@ a {
 	width: 100%;
 	object-fit: cover;
 }
+
 .menu_bouton {
 	position: absolute;
 	right: 0;
 	top: 25px;
-	margin-right: 2rem;
+	margin-right: 3%;
 	margin-bottom: 1rem;
 	border-style: hidden;
 	background: none;
+	margin-top: 2.9rem;
 }
 
 .menu_contenaire {
@@ -107,6 +119,7 @@ a {
 	background-color: #f6f6f6;
 	position: relative;
 	max-width: 800px;
+	margin-top: -35%;
 
 	&_header {
 		display: flex;
@@ -131,6 +144,38 @@ a {
 .menu_contenaire_like {
 	height: 20px;
 	border: none;
+}
+
+/* TAILLE DES COEURS */
+
+.img_icon_coeur {
+	height: 2rem;
+	position: absolute;
+	bottom: 1.2rem;
+	right: 0;
+}
+
+.img_icon_coeur_gradient {
+	height: 1.8rem;
+	position: absolute;
+	bottom: 1.35rem;
+	right: -0.03rem;
+}
+
+/* ANIMATION SURVOL COEUR */
+
+.icon_coeur {
+	opacity: 1;
+}
+.icon_coeur:hover {
+	opacity: 0;
+}
+
+.img_icon_coeur_gradient {
+	opacity: 0;
+}
+.img_icon_coeur_gradient:hover {
+	opacity: 1;
 }
 
 article {
@@ -268,12 +313,28 @@ p {
 		1rem
 		0;
 }
+
+.menu_item_titre {
+	white-space: nowrap;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.menu_item_description {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 80%;
+}
+
 .menu_item {
 	display: flex;
 	flex: 1;
 
 	&_header {
 		flex: 1;
+		width: 160px;
 	}
 }
 .menu_item_prix {
@@ -292,19 +353,19 @@ p {
 	align-items: center;
 	justify-content: center;
 	transition: 5s;
-	transform: translate(
-			-60px
-		)
-		1s;
+	transform: translateX(
+		60px
+	);
+	transition-duration: 1000ms;
 }
 .lien_retour {
 	display: flex;
 	align-items: center;
 }
 .retour {
-	height: 2rem;
+	height: 1.5rem;
 	position: absolute;
-	left: -7rem;
+	left: -4rem;
 }
 
 .icon_check {
@@ -342,6 +403,24 @@ p {
 		);
 }
 
+.commander_bouton:hover {
+	background: lighten(
+		$color:
+			#ff79da,
+		$amount:
+			0.2
+	);
+	box-shadow: 0
+		0.7rem
+		0.7rem
+		rgba(
+			0,
+			0,
+			0,
+			0.25
+		);
+}
+
 footer {
 	position: absolute;
 	width: 100%;
@@ -353,7 +432,6 @@ footer {
 			19
 		);
 		width: 100%;
-		height: 10rem;
 		padding: 2rem;
 		box-sizing: border-box;
 	}
@@ -379,12 +457,35 @@ footer {
 main {
 	position: relative;
 }
-@media (min-width: 380px) and (max-width: 799px) {
-	.image_header {
-		max-height: 32rem;
-	}
+
+@media (min-width: 320px) and (max-width: 799px) {
 	.menu_contenaire {
 		margin-top: -35%;
+	}
+	.footer_container {
+		justify-content: center;
+		align-items: flex-start;
+		display: flex;
+		margin-top: 2rem;
+		background-color: #131313;
+		width: 100%;
+		height: 14rem;
+		padding: 2rem;
+		position: absolute;
+		top: 190px;
+		margin-top: -13rem;
+	}
+	.header_container {
+		height: 100%;
+		width: 100%;
+		max-width: 840px;
+		margin: 0
+			auto;
+		display: flex;
+		position: relative;
+		justify-content: center;
+		display: flex;
+		align-items: center;
 	}
 }
 
@@ -420,7 +521,6 @@ main {
 
 	main {
 		position: relative;
-		top: 112px;
 		height: fit-content;
 		width: 100%;
 	}
@@ -430,6 +530,7 @@ main {
 		position: fixed;
 		top: 0;
 		margin-top: 3rem;
+		width: inherit;
 	}
 
 	.menu_contenaire {
@@ -448,6 +549,8 @@ main {
 		top: 190px;
 		position: inherit;
 		width: 100%;
+		height: 14rem;
+		margin-top: -4rem;
 	}
 
 	.footer_container {
@@ -457,10 +560,11 @@ main {
 		margin-top: 2rem;
 		background-color: #131313;
 		width: 100%;
-		height: 14rem;
+		height: 10rem;
 		padding: 2rem;
 		position: absolute;
 		top: 190px;
+		margin-top: -3rem;
 	}
 
 	footer

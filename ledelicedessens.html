@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="Fr">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./sass/pages/menupage.css" type="text/css">
+		<link rel="stylesheet" href="sass/pages/menupage.css" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
 		<title>Oh my food</title>
@@ -12,17 +12,24 @@
 		<header>
 			<div class="header_container">
 				<a href="./index.html" class="lien_retour"><img src="./public/img/icon_retour.svg" alt="fleche retour" class="retour"></a>
-				<a href="index.html"><img src="./public/img/logo-ohmyfood.png" alt="logo-ohmyfood"></a>
+				<a href="index.html"><img src="./public/img/logo-ohmyfood.png" alt="logo-ohmyfood" class="logo_header"></a>
 			</div>
 		</header>
 		<main>
 			<div class="img_bg">
-				<img src="./public/img/1assiette.jpg" class="image_header" alt="assiette de restaurant">
+				<img src="./public/img/2assiette.jpg" class="image_header" alt="assiette de restaurant">
 			</div>
 			<div class="menu_contenaire">
 				<div class="menu_contenaire_header">
-					<h2 class="menu_contenaire_titre">La palette du goût</h2>
-					<button class="menu_bouton"><img src="./public/img/icon_coeur.png" class="menu_contenaire_like" alt="img"></button>
+					<h2 class="menu_contenaire_titre">Le délice des sens</h2>
+					<div class="menu_bouton">
+						<div class="icon_coeur">
+							<img src="public/img/icon_coeur.svg" alt="coeur" class="img_icon_coeur">
+						</div>
+						<div class="icon_coeur_gradient">
+							<img src="public/img/icon_coeur_gradient.png" class="img_icon_coeur_gradient" alt="coeur dégradé">
+						</div>
+					</div>
 				</div>
 				<article class="menu_catégories">
 					<a href="#" class="plats" >
@@ -31,9 +38,9 @@
 						<div class="catégories delay1">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Fricassée d'espargot</h4>
+									<h4 class="menu_item_titre">Tartare de thon</h4>
 									<p class="menu_item_description">
-										Au piment d'espelette
+										Assaisoné au yuzu
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -47,9 +54,9 @@
 						<div class="catégories delay2">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Foie gras de canard mi-cuit</h4>
+									<h4 class="menu_item_titre">Bouchée de homard croustillant</h4>
 									<p class="menu_item_description">
-										Et ses copeaux de truffe noires
+										Et sa farandole de petits légumes
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -63,9 +70,9 @@
 						<div class="catégories delay3">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Oeuf au plat</h4>
+									<h4 class="menu_item_titre">Velouté de cèpes</h4>
 									<p class="menu_item_description">
-										Assaisonée à la truffe sur lit de gingembre
+										Aux truffes
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -85,9 +92,9 @@
 						<div class="catégories delay4">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Filet de boeuf aux herbes</h4>
+									<h4 class="menu_item_titre">Poulet rôti aux herbes de provence</h4>
 									<p class="menu_item_description">
-										Accompagné de sa ribambelle de légumes
+										Et sa crème de truffe
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -101,9 +108,9 @@
 						<div class="catégories delay5">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Parmentier de queue de boeuf</h4>
+									<h4 class="menu_item_titre">Langouste rôtie</h4>
 									<p class="menu_item_description">
-										A la truffe noire sur sa purée de panais
+										Et ses légumes de saison
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -117,9 +124,9 @@
 						<div class="catégories delay6">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Filet de Turbot</h4>
+									<h4 class="menu_item_titre">Côte de boeuf angus</h4>
 									<p class="menu_item_description">
-										Aux agrumes
+										Et sa purée de panais
 									</p>
 								</div>
 								<div class="menu_item_prix">
@@ -139,76 +146,77 @@
 						<div class="catégories delay7">
 							<div class="menu_item">
 								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Paris-Brest</h4>
-									<p class="menu_item_description">
-										Revisité
-									</p>
-								</div>
-								<div class="menu_item_prix">
-									18€
-								</div>
-								<div class="menu_item_icon_check out">
-									<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
-								</div>
+									<h4 class="menu_item_titre">Farandole de desserts>
+								</h4>
+								<p class="menu_item_description">
+									Du chef
+								</p>
+							</div>
+							<div class="menu_item_prix">
+								18€
+							</div>
+							<div class="menu_item_icon_check out">
+								<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
 							</div>
 						</div>
-						<div class="catégories delay8">
-							<div class="menu_item">
-								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Macaron au chocolat d'exception</h4>
-									<p class="menu_item_description">
-										Et glace à la vanille de Madagascar
-									</p>
-								</div>
-								<div class="menu_item_prix">
-									22€
-								</div>
-								<div class="menu_item_icon_check out">
-									<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
-								</div>
-							</div>
-						</div>
-						<div class="catégories delay9">
-							<div class="menu_item">
-								<div class="menu_item_header">
-									<h4 class="menu_item_titre">Mousse au chocolat</h4>
-									<p class="menu_item_description">
-										Au piment d'espelette et à la truffe noire
-									</p>
-								</div>
-								<div class="menu_item_prix">
-									23€
-								</div>
-								<div class="menu_item_icon_check out">
-									<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
-								</div>
-							</div>
-						</div>
-						<var></var>
-					</a>
-				</article>
-				<div class="bouton">
-					<a class="commander_bouton blanc">Commander</a>
-				</div>
-			</div>
-		</main>
-		<footer>
-			<div class="footer_container">
-				<img src="public/img/logo-ohmyfood-blanc.svg" class="logo-ohmyfood" alt="logo blanc">
-				<div class="footer_liste">
-					<div class="footer_liste_texte_logo">
-						<img src="public/img/icon_couverts.svg" class="icon_footer" alt="couvert">
-						<a>Proposer un restaurant</a>
 					</div>
-					<div class="footer_liste_texte_logo">
-						<img src="public/img/icon_mains.svg" class="icon_footer" alt="main">
-						<a>Devenir partenaire</a>
+					<div class="catégories delay8">
+						<div class="menu_item">
+							<div class="menu_item_header">
+								<h4 class="menu_item_titre">Crême brûlée</h4>
+								<p class="menu_item_description">
+									Revisitée
+								</p>
+							</div>
+							<div class="menu_item_prix">
+								22€
+							</div>
+							<div class="menu_item_icon_check out">
+								<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
+							</div>
+						</div>
 					</div>
-					<a>Mentions légales</a>
-					<br>
-					<a>Contact</a>
-				</div>
+					<div class="catégories delay9">
+						<div class="menu_item">
+							<div class="menu_item_header">
+								<h4 class="menu_item_titre">Tiramisu</h4>
+								<p class="menu_item_description">
+									A la noisette
+								</p>
+							</div>
+							<div class="menu_item_prix">
+								23€
+							</div>
+							<div class="menu_item_icon_check out">
+								<img class="icon_check" src="./public/img/icon_check.svg" alt="icon_check">
+							</div>
+						</div>
+					</div>
+					<var></var>
+				</a>
+			</article>
+			<div class="bouton">
+				<a class="commander_bouton blanc">Commander</a>
 			</div>
-		</footer>
-	</body>
+		</div>
+	</main>
+	<footer>
+		<div class="footer_container">
+			<img src="public/img/logo-ohmyfood-blanc.svg" class="logo-ohmyfood" alt="logo blanc">
+			<div class="footer_liste">
+				<div class="footer_liste_texte_logo">
+					<img src="public/img/icon_couverts.svg" class="icon_footer" alt="couvert">
+					<a>Proposer un restaurant</a>
+				</div>
+				<div class="footer_liste_texte_logo">
+					<img src="public/img/icon_mains.svg" class="icon_footer" alt="main">
+					<a>Devenir partenaire</a>
+				</div>
+				<a>Mentions légales</a>
+				<br>
+				<a href="mailto:ohmyfood@gmail.com">Contact</a>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>
